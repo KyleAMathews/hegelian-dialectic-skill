@@ -126,9 +126,9 @@ The skill rests on three theoretical frameworks — one per bottleneck — plus 
 
 ### Rao: The Belief Bottleneck
 
-From Venkatesh Rao's "Electric Monks" framework (after Douglas Adams). Belief inertia — the cost of genuinely entertaining a position's negation — is the bottleneck Rao identified. The Monks eliminate it by carrying 100% of the belief load, freeing you to operate as a pure context-switching specialist.
+From Venkatesh Rao's "Electric Monks" framework (after Douglas Adams). Rao argues there are three ways to speed up your cognitive transients: (a) maintain a richer library of mental models, (b) switch between them faster, (c) believe fewer things. The first two hit hard limits — more models means higher search costs, faster switching runs into biology. Only the third has no ceiling: if machines carry the belief load, you can become a pure context-switching specialist.
 
-Boyd's analogy: in the Korean War, F-86 Sabres achieved a 10:1 kill ratio against MIG-15s despite similar flight capabilities. The difference was hydraulic controls — the pilot could reorient faster because the plane did the mechanical work, freeing attention for *choosing better maneuvers.* The Monks are hydraulic controls for intellectual work.
+Boyd's analogy: in the Korean War, F-86 Sabres achieved a 10:1 kill ratio against MIG-15s despite similar flight capabilities. The difference was hydraulic controls — the pilot could reorient faster because the plane did the mechanical work. But the transients weren't just faster, they were *better* — by devoting less attention to struggling with controls, the pilot chose better maneuvers. The Monks work the same way: by carrying the belief work, they don't just save you time, they free up cognitive capacity that goes into higher-quality structural analysis.
 
 Rao wrote this framework before LLMs. Belief inertia is real, but it's not the only bottleneck — and arguably not the most expensive one.
 
