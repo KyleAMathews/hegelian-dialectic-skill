@@ -8,7 +8,7 @@ Two AI subagents — the Electric Monks — *believe* fully committed positions 
 
 You operate from a belief-free position above the Monks, analyzing the *structure* of the contradiction rather than being inside either side. This isn't artificial intelligence — it's an **artificial belief system** that frees you to think.
 
-**What the output feels like:** Left alone, LLMs produce shallow takes. The dialectic breaks that pattern. Because the process forces extreme positions and recombines across domains, the output reads like a good human author: rigorous, surprising, and layered. Each round ratchets the mental models tighter, because each synthesis becomes the next round's thesis. By Round 2–3, the dialectic is operating in territory no single prompt could reach, producing insights that feel *earned* rather than generated.
+**What the output feels like:** Left alone, LLMs produce shallow takes. The dialectic breaks that pattern. Because the process forces extreme positions and recombines across domains, the output reads like a good human author: rigorous, surprising, and layered. Each round builds on the last, because each synthesis becomes the next round's thesis. By Round 2–3, the dialectic is operating in territory no single prompt could reach, producing insights that feel *earned* rather than generated.
 
 **Why this works** — thinking well about hard problems has at least three bottlenecks, and they compound:
 
