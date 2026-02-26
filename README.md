@@ -84,7 +84,7 @@ dialectics/
 
 ## How It Works
 
-The process has eight phases.
+The process has seven phases.
 
 ### Phase 1: Elenctic Interview + Research — surface the real contradiction
 
@@ -94,27 +94,27 @@ The orchestrator interviews you Socratically — surfacing hidden assumptions, f
 
 The orchestrator crafts two prompts — one per Monk — calibrated to your specific belief burden. Each prompt includes framing corrections that prevent the Monk from falling into the obvious, boring version of the argument, plus targeted research directives for position-specific evidence.
 
-### Phase 3–4: Spawn the Electric Monks — two fully committed position essays
+### Phase 3: Spawn the Electric Monks — two fully committed position essays
 
 Two separate AI agents — each in a fresh, isolated context — write fully committed position essays. They don't hedge. They don't try to be balanced. Each one *inhabits* its position and makes the absolute strongest case. Spawning them in separate sessions with no shared context produces structural decorrelation — genuinely different reasoning paths, not the same analysis with different conclusions bolted on.
 
-### Phase 5: Determinate Negation — find where each argument undermines itself
+### Phase 4: Determinate Negation — find where each argument undermines itself
 
 The orchestrator analyzes both essays to find: where each position's own logic undermines itself (self-sublation), what both sides implicitly agree on without realizing it (shared assumptions), and the *specific* way each position fails — not "it's wrong" but "it fails in THIS way, which points toward THIS thing that's missing."
 
 Then comes the Boydian decomposition: shatter both arguments into atomic parts, strip them of which Monk said them, and look for surprising cross-domain connections.
 
-### Phase 6: Sublation (Aufhebung) — synthesize something neither side could reach
+### Phase 5: Sublation (Aufhebung) — synthesize something neither side could reach
 
 The orchestrator generates a synthesis that simultaneously *cancels* both positions as complete truths, *preserves* the genuine insight in each, and *elevates* to a new concept that transforms the question itself.
 
 This is not compromise. It's not "use A for some cases and B for others." It's a reconceptualization — something neither Monk could have conceived from within their frame, but which, once stated, makes the original contradiction *predictable.* The synthesis is an abductive hypothesis: what would make it *unsurprising* that both Monk positions exist with genuine evidence?
 
-### Phase 7: Validation — did the Monks feel elevated or defeated?
+### Phase 6: Validation — did the Monks feel elevated or defeated?
 
 Both Monks evaluate the synthesis: were they *elevated* (their core insight preserved within something larger) or *defeated* (their position just dismissed)? Then a hostile auditor — a fresh agent with no position — attacks the synthesis for hidden assumptions, compromise disguised as transcendence, and structural flaws.
 
-### Phase 8: Recursion — where the real value lives
+### Phase 7: Recursion — where the real value lives
 
 Each synthesis generates new contradictions. The orchestrator proposes 2–4 directions; you choose which to pursue. The process repeats — and each round gets sharper, pulling in new cross-domain material that the previous round made relevant.
 

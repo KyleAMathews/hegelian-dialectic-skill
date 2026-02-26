@@ -52,20 +52,19 @@ You (Orchestrator)
 │   ├── 1e: Write context briefing document to file
 │   └── 1f: Confirm framing with user — ask about gaps in coverage
 ├── Phase 2: Generate Electric Monk prompts (you) — reference briefing file
-├── Phase 3: Spawn Monk A — Thesis (subagent, reads briefing, BELIEVES fully)
-├── Phase 4: Spawn Monk B — Antithesis (subagent, reads briefing, BELIEVES fully)
+├── Phase 3: Spawn the Electric Monks (subagents, read briefing, BELIEVE fully)
 │   ├── Decorrelation check: did monks genuinely diverge in framework, not just conclusion?
 │   └── User checkpoint: "Is there evidence or a comparison class both monks missed?"
-├── Phase 5: Determinate Negation (you — structural analysis, saved to file)
-│   ├── 5.0: Internal tensions — where does each monk's own logic undermine itself?
-│   └── 5.5: Boydian decomposition — shatter, find cross-domain connections
-├── Phase 6: Sublation / Aufhebung (you — synthesis, saved to file)
+├── Phase 4: Determinate Negation (you — structural analysis, saved to file)
+│   ├── 4.0: Internal tensions — where does each monk's own logic undermine itself?
+│   └── 4.5: Boydian decomposition — shatter, find cross-domain connections
+├── Phase 5: Sublation / Aufhebung (you — synthesis, saved to file)
 │   └── Abduction test: does synthesis make the original contradiction *predictable*?
-├── Phase 7: Validation (Monks A & B evaluate — were they elevated or defeated?)
+├── Phase 6: Validation (Monks A & B evaluate — were they elevated or defeated?)
 │   ├── Adversarial check: would the hardest-hit monk actually accept this?
 │   ├── Hostile Auditor: fresh agent, strongest model, sole job is to find flaws
 │   └── Refine: present improvements individually to user, incorporate accepted ones
-└── Phase 8: Recursion — propose 2-4 directions, user chooses (default: at least once)
+└── Phase 7: Recursion — propose 2-4 directions, user chooses (default: at least once)
     ├── Queue unexplored contradictions as the user's orientation library
     └── Repeat from Phase 2 (or Phase 1 if new research needed) on chosen direction
 ```
@@ -329,8 +328,8 @@ Calibrate the monks based on what you learned in Phase 1c′:
 **Why full belief is non-negotiable:** This is an artificial belief system, not a debate exercise. The user's cognitive agility depends on the monks carrying 100% of the belief load. When both monks believe fully, the user can operate in the belief-free space between them — analyzing the *structure* of the contradiction, spotting shared assumptions, finding cross-domain connections. When a monk hedges ("both sides have merit"), the user is pulled back into belief-space, their transients slow, and the dialectic degrades into a book report.
 </phase2>
 
-<phase3_4>
-## Phase 3-4: Spawn the Electric Monks
+<phase3>
+## Phase 3: Spawn the Electric Monks
 
 Spawn Monk A and Monk B as separate subagent sessions. Use `claude -p` (or your environment's equivalent for spawning an independent agent) so each gets a clean context with full belief commitment.
 
@@ -344,14 +343,14 @@ These can run in parallel if your environment supports it.
 
 **Efficiency note:** With the context briefing in place, monks need only 2-3 targeted searches each (vs. 15-25 without it). For personal/values domains, monks may need zero additional searches — the briefing contains the user's own material which is the primary evidence base.
 
-**For recursive rounds (Phase 8):** See Phase 8 for guidance — recursive rounds may or may not need new research depending on whether the new contradiction opens new conceptual domains.
+**For recursive rounds (Phase 7):** See Phase 7 for guidance — recursive rounds may or may not need new research depending on whether the new contradiction opens new conceptual domains.
 
 **After both complete:** Read both outputs carefully. Check:
 - Did each monk actually *believe* fully, or did it hedge? (A hedging monk has failed its core function.)
 - Did the framing corrections work, or did a monk fall into the degenerate framing?
 - Are the arguments grounded in specific evidence (from the briefing or their own searches)?
 
-**Decorrelation check:** Verify the monks actually diverged. The skill's value comes from *structurally uncorrelated* exploration of the problem space — mathematically, diversity is literally subtracted from ensemble error, and correlated errors eliminate this benefit entirely. Check:
+**Decorrelation check:** Verify the monks actually diverged. The skill's value comes from *structurally uncorrelated* exploration of the problem space. Check:
 - Do the monks cite *different* evidence, or substantially overlapping sources?
 - Do they frame the problem using *different* conceptual vocabularies?
 - Do their unstated assumptions *diverge*, or do they share the same background framework?
@@ -376,10 +375,10 @@ Then ask:
 2. **"Is there a claim either monk makes that should be tested against evidence neither has considered?"** — This is the second high-leverage intervention point. In testing, users identified claims that sounded plausible but collapsed under scrutiny when tested against comparison classes the monks didn't consider. Catching this before synthesis prevents the entire downstream analysis from being built on an untested assumption.
 
 If the user identifies a testable claim, run a targeted research agent to check it. This is cheap (~25-50K tokens) and can fundamentally change the quality of the synthesis.
-</phase3_4>
+</phase3>
 
-<phase5>
-## Phase 5: Determinate Negation
+<phase4>
+## Phase 4: Determinate Negation
 
 This is the structural analysis phase. You (the orchestrator) perform this yourself — do NOT delegate to a subagent, because you need to maintain continuity with the elenctic interview and your domain research.
 
@@ -389,25 +388,25 @@ Read both monks' outputs and analyze the contradiction using this exact structur
 
 **Important: treat monk output as testimony, not evidence.** Monks pushed to full conviction will sometimes get a bit silly — overstating mechanisms, presenting uncertain claims as settled, making leaps that sound compelling but don't hold up. This is expected and not a problem. Your job is to work with the *structure* of their arguments (what they're actually claiming, where the real collision is, what assumptions they share) — not to be persuaded by their rhetoric. If a monk asserts something that smells like confabulation, note it and don't build your synthesis on it. The user checkpoint after the essays catches the worst cases, but stay alert here too.
 
-**Before you begin: write down your current best guess at the synthesis in one sentence.** Set it aside. Proceed with the formal analysis below. At the end of Phase 6, compare your final synthesis to this initial guess. If they're substantially similar, you may be pattern-matching rather than genuinely synthesizing — check whether the Boydian decomposition actually produced cross-domain material or you recombined within the same frame.
+**Before you begin: write down your current best guess at the synthesis in one sentence.** Set it aside. Proceed with the formal analysis below. At the end of Phase 5, compare your final synthesis to this initial guess. If they're substantially similar, you may be pattern-matching rather than genuinely synthesizing — check whether the Boydian decomposition actually produced cross-domain material or you recombined within the same frame.
 
-### 5.0 Internal Tensions (Self-Sublation)
+### 4.0 Internal Tensions (Self-Sublation)
 
 Before comparing the monks to each other, analyze each essay *in isolation.* Where does Monk A's own argument, pushed to its logical extreme, undermine its own premises? Where does Monk B's internal logic generate contradictions it can't resolve? This is Hegel's self-sublation — the position contains its own negation.
 
 The deepest synthesis material often comes not from where the monks *disagree with each other* but from where each position *disagrees with itself.* A monk that argues for decentralization but keeps needing coordination mechanisms is undermining itself. A monk that argues for integration but keeps carving out exceptions is undermining itself. These internal fractures point toward what each position is *trying to become* — which is often where the synthesis lives.
 
-### 5.1 Surface Contradiction
+### 4.1 Surface Contradiction
 State the apparent disagreement in its simplest form. What does each side think the argument is about?
 
-### 5.2 Shared Assumptions
+### 4.2 Shared Assumptions
 Identify what BOTH agents implicitly agree on that they don't realize they agree on. These shared assumptions are often where the real limitation lives. Probe:
 - Do both assume the same unit of analysis?
 - Do both assume the same problem is central?
 - Do both assume a particular model of how their domain works?
 - What frame constrains both of their visions?
 
-### 5.3 Determinate Negation
+### 4.3 Determinate Negation
 For each agent, identify the SPECIFIC way it fails — not "it's wrong" but "it fails in THIS specific way, which points toward THIS specific thing missing from its worldview."
 
 **Determinate negation is the engine of the dialectic.** It is not:
@@ -419,10 +418,10 @@ It IS:
 - "Monk B fails because [SPECIFIC FAILURE], which reveals [SPECIFIC MISSING THING]"
 - The failures are COMPLEMENTARY — each agent's blind spot is something the other can partially see, but neither sees the whole.
 
-### 5.4 The Hidden Question
+### 4.4 The Hidden Question
 Articulate the deeper question the contradiction is ACTUALLY about — the question neither agent asked because they were both too committed to their answers. This should reframe the entire debate in a way that makes both positions legible as partial truths.
 
-### 5.5 Boydian Decomposition (Destruction Phase)
+### 4.5 Boydian Decomposition (Destruction Phase)
 
 **Before attempting synthesis, shatter both positions into their atomic parts.** This step comes from Boyd's "Destruction and Creation" — you cannot synthesize something genuinely new by recombining within the same conceptual domains. You must first destroy the existing wholes, scatter the parts, and look for cross-domain connections that were invisible when the parts were trapped inside their original positions.
 
@@ -438,7 +437,7 @@ The first two steps reorganize existing material. The third is where creativity 
 
 **Example from test run (React/Vue dialectic):** Shattering both positions revealed that "legacy burden" (from the corporate lab essay) and "self-referential complexity" (from the auteur essay) were describing the *same phenomenon* from different angles. Liberated from their positions, they connected to form a new concept: "innovation character is predicted by legacy burden, not funding source." This wasn't available from within either position.
 
-### 5.6 Sublation Criteria
+### 4.6 Sublation Criteria
 Before attempting synthesis, specify what it must accomplish:
 - It must preserve [specific insight from A]
 - It must preserve [specific insight from B]
@@ -446,10 +445,10 @@ Before attempting synthesis, specify what it must accomplish:
 - It must answer [the hidden question]
 
 **Separating criteria from synthesis is important.** It prevents you from pattern-matching to a pre-formed compromise.
-</phase5>
+</phase4>
 
-<phase6>
-## Phase 6: Sublation (Aufhebung)
+<phase5>
+## Phase 5: Sublation (Aufhebung)
 
 Now generate the synthesis. Do additional research if needed — search for emerging approaches that might embody the synthesis, historical parallels where similar contradictions were resolved, or protocol/standard layers that dissolved analogous tensions.
 
@@ -496,7 +495,7 @@ Draft what you *expect* the validation responses to look like — this helps che
 - Monk A should say: "Yes, this preserves my core insight about [X], but I now see I was wrong about [Y] because I was trapped in [Z assumption]"
 - Monk B should say: "Yes, this preserves my core insight about [X], but I now see I was wrong about [Y] because I was trapped in [Z assumption]"
 
-**If you can't draft convincing versions of these, your sublation probably isn't good enough.** Revise before sending to the agents in Phase 7.
+**If you can't draft convincing versions of these, your sublation probably isn't good enough.** Revise before sending to the agents in Phase 6.
 
 ### New Contradictions
 
@@ -506,7 +505,7 @@ Identify what NEW contradictions this sublation generates. A genuine sublation i
 
 End with an explicit model update: "Before this dialectic, the assumption was X. The contradiction between A and B revealed Y. The updated model is Z, because..."
 
-**Save the complete Phase 5 and Phase 6 output to files** (e.g., `determinate_negation.md` and `sublation.md`). This keeps a clean record and allows you to pass file references or condensed summaries to validation agents rather than inlining the full text.
+**Save the complete Phase 4 and Phase 5 output to files** (e.g., `determinate_negation.md` and `sublation.md`). This keeps a clean record and allows you to pass file references or condensed summaries to validation agents rather than inlining the full text.
 
 ### Present the Synthesis to the User
 
@@ -514,11 +513,11 @@ Before sending to the monks for validation, **present the synthesis to the user.
 
 > Here's my synthesis. Remember — this is where your judgment is most valuable. Does this ring true? Does it miss something? Is there a part that feels like hand-waving or compromise rather than genuine insight? Push back on anything that doesn't land. I'd rather revise now than validate something that's off.
 
-If the user identifies issues, revise before proceeding to Phase 7. User corrections at this stage are extremely high-leverage — they prevent the validation and recursion phases from building on a flawed foundation.
-</phase6>
+If the user identifies issues, revise before proceeding to Phase 6. User corrections at this stage are extremely high-leverage — they prevent the validation and recursion phases from building on a flawed foundation.
+</phase5>
 
-<phase7>
-## Phase 7: Validation by the Electric Monks
+<phase6>
+## Phase 6: Validation by the Electric Monks
 
 The synthesis must be validated by the original monks — not by you, and not just by the user. This is how Hegelian dialectics works: the thesis and antithesis must each recognize themselves as preserved-but-elevated in the Aufhebung.
 
@@ -587,7 +586,7 @@ After monk validation, spawn a **hostile auditor** — a separate agent whose so
 
 **Use the strongest available model with extended thinking enabled.** The auditor's value comes from catching things the orchestrator missed while embedded in the process — it needs fresh eyes and maximum reasoning capability. The cost is low (reading three short-to-medium essays plus a synthesis) and the leverage is high.
 
-**Critical: the auditor reads only the monks' essays and the synthesis.** Do NOT give it the orchestrator's Phase 5 structural analysis. The auditor should attack the synthesis from fresh eyes, not inherit the orchestrator's framing of the contradiction.
+**Critical: the auditor reads only the monks' essays and the synthesis.** Do NOT give it the orchestrator's Phase 4 structural analysis. The auditor should attack the synthesis from fresh eyes, not inherit the orchestrator's framing of the contradiction.
 
 **Also critical: give the auditor domain context.** In testing, the most common auditor failure was building critiques on false premises about how the domain actually works. Include a brief paragraph (2-3 sentences) explaining the relevant domain mechanics — how the system is used, who the actors are, what the current state of affairs is. This prevents the auditor from attacking a straw version of the domain.
 
@@ -681,22 +680,22 @@ State findings. Aim for 500-1000 words.
 - **Always when the user or orchestrator suspects compromise.** If the synthesis feels too easy, too agreeable, or like it's splitting the difference — deploy the auditor regardless of round.
 
 **How to use the auditor's output:**
-- If the auditor proposes a harder contradiction, this often becomes the best direction for Phase 8 recursion — better than what the orchestrator would have found
+- If the auditor proposes a harder contradiction, this often becomes the best direction for Phase 7 recursion — better than what the orchestrator would have found
 - If it catches hidden shared assumptions, same — these are frequently the highest-value recursion targets
-- If it flags compromise-disguised-as-transcendence, return to Phase 6 and push harder
+- If it flags compromise-disguised-as-transcendence, return to Phase 5 and push harder
 - If it produces generic skepticism that doesn't engage the domain specifics, **discard it** — a bad auditor critique is worse than none because it wastes the user's attention
 - If the synthesis survives the auditor largely intact, you have high confidence it's genuine
 
 ### Interpreting the Results
 
 - **Both monks feel elevated:** The sublation is valid — belief was transformed, not defeated. Both monks now believe something larger that contains their original position. Proceed.
-- **One monk feels defeated:** The synthesis dropped one monk's belief load rather than sublating it. The synthesis is biased toward the other side. Revise Phase 6 to better preserve the defeated monk's core insight.
-- **Both monks feel defeated:** The synthesis killed both beliefs without replacing them with something larger. It's probably just compromise. Return to Phase 5 and look for a deeper hidden question.
-- **A monk identifies genuine weakness:** Take the critique seriously. Convergent critiques from both monks are especially strong signal — they point toward either the new contradictions for Phase 8 recursion or a revision needed in Phase 6.
+- **One monk feels defeated:** The synthesis dropped one monk's belief load rather than sublating it. The synthesis is biased toward the other side. Revise Phase 5 to better preserve the defeated monk's core insight.
+- **Both monks feel defeated:** The synthesis killed both beliefs without replacing them with something larger. It's probably just compromise. Return to Phase 4 and look for a deeper hidden question.
+- **A monk identifies genuine weakness:** Take the critique seriously. Convergent critiques from both monks are especially strong signal — they point toward either the new contradictions for Phase 7 recursion or a revision needed in Phase 5.
 - **Adversarial check fails:** The synthesis may be intellectually right but practically irrelevant to how decisions actually get made. Consider running a third round that engages the authority/power/decision-making structure, not just the intellectual argument.
 - **Hostile auditor proposes a harder contradiction:** This is the auditor's highest-value output. It often becomes the best recursion direction — better than what the orchestrator generated.
 - **Hostile auditor finds shared assumptions:** These are frequently the most valuable recursion targets — assumptions the orchestrator was embedded in and couldn't see.
-- **Hostile auditor flags compromise-as-transcendence:** Return to Phase 6. The synthesis needs to change the *question,* not split the difference.
+- **Hostile auditor flags compromise-as-transcendence:** Return to Phase 5. The synthesis needs to change the *question,* not split the difference.
 - **Hostile auditor produces generic skepticism:** Discard it. If the critiques could apply to any proposal in any field, they're not engaging this synthesis. Don't waste the user's attention on them.
 
 ### Refine the Synthesis
@@ -717,13 +716,13 @@ After collecting monk validation and auditor feedback, the orchestrator usually 
 
 3. **Revise the synthesis** with the accepted improvements. This produces a tighter, more defensible synthesis — and it often clarifies which remaining tensions are genuine recursion targets vs. which were just gaps in the original draft.
 
-4. **Present recursion directions.** The remaining feedback — harder contradictions, unresolved tensions, things that can't be patched into the current synthesis because they require a new round — become the Phase 8 menu.
+4. **Present recursion directions.** The remaining feedback — harder contradictions, unresolved tensions, things that can't be patched into the current synthesis because they require a new round — become the Phase 7 menu.
 
 **Why this matters:** Without this step, the user faces a wall of validation + auditor output and has to do the triage themselves. With it, the orchestrator does the editorial work and the user makes yes/no decisions on specific improvements. This also prevents a subtle failure mode: rushing to recursion when the current synthesis could have been strengthened first. A refined Round 1 synthesis produces a sharper Round 2 contradiction.
-</phase7>
+</phase6>
 
-<phase8>
-## Phase 8: Recursion — Where the Real Value Lives
+<phase7>
+## Phase 7: Recursion — Where the Real Value Lives
 
 **Recursion is not optional cleanup. It is the engine of the skill.** The first round produces a synthesis. The recursive rounds force that synthesis to confront its own limitations, generating increasingly powerful mental models. Each cycle compresses understanding upward. In test runs, a React/Vue dialectic went from "corporate lab vs. independent auteur" → "the Layer Thesis" → "co-evolutionary arms race." An institutional identity dialectic went from "enforcement vs. freedom" → "practice-based identity" → "nucleation as formation mechanism" → then surfaced a third-level tension that reframed everything. In both cases, the recursive rounds produced the most valuable insights.
 
@@ -738,10 +737,10 @@ After collecting monk validation and auditor feedback, the orchestrator usually 
 
 ### Proposing Recursive Directions
 
-After Phase 7 validation, the orchestrator has rich material for identifying where the dialectic could go next. **The orchestrator proposes directions — the user chooses.** A genuine sublation is fertile: it typically generates multiple new contradictions, not just one. The dialectic *branches*.
+After Phase 6 validation, the orchestrator has rich material for identifying where the dialectic could go next. **The orchestrator proposes directions — the user chooses.** A genuine sublation is fertile: it typically generates multiple new contradictions, not just one. The dialectic *branches*.
 
 Sources for recursive contradictions:
-- **New contradictions identified in Phase 6** — every genuine sublation generates these
+- **New contradictions identified in Phase 5** — every genuine sublation generates these
 - **Convergent critiques from validation agents** — when both agents independently identify the same weakness, that weakness IS a candidate contradiction
 - **The user's intervention** — often the most powerful source. The user sees something both agents and the orchestrator missed.
 - **Unresolved tensions the synthesis names but doesn't engage** — the synthesis may acknowledge a deeper problem without solving it
@@ -754,7 +753,7 @@ Sources for recursive contradictions:
 
 ### Present a Menu, Not a Decision
 
-After each round, generate a **burst of 5-8 candidate concepts/directions** — not just contradictions but concrete mechanisms, architectural patterns, novel framings, and open vulnerabilities that the synthesis makes newly conceivable. Cast a wide net first: the value is in the *density* of the newly opened conceptual space. Include material from monk defeasibility responses (Phase 7, question 5), auditor output, and your own structural analysis.
+After each round, generate a **burst of 5-8 candidate concepts/directions** — not just contradictions but concrete mechanisms, architectural patterns, novel framings, and open vulnerabilities that the synthesis makes newly conceivable. Cast a wide net first: the value is in the *density* of the newly opened conceptual space. Include material from monk defeasibility responses (Phase 6, question 5), auditor output, and your own structural analysis.
 
 Then **cluster the burst into 2-4 coherent directions**, each briefly described as a contradiction worth exploring. Several candidate concepts often point at the same underlying tension from different angles. For example:
 
@@ -777,7 +776,7 @@ Each recursive cycle follows Boyd's full cycle: the previous synthesis is a Stru
 
 When to research in recursion:
 - The new contradiction involves concepts, mechanisms, or domains that weren't in the original research
-- The Boydian decomposition (Phase 5.5) reveals that adjacent-domain material would enable cross-domain connections
+- The Boydian decomposition (Phase 4.5) reveals that adjacent-domain material would enable cross-domain connections
 - An agent or the user identifies a specific factual or theoretical gap
 
 When research is unnecessary:
@@ -787,10 +786,10 @@ When research is unnecessary:
 **Fresh agents are usually better than resumed sessions for recursion.** The recursive round is a *new* dialectic — the contradiction has shifted, the conceptual space has evolved. Agents carrying forward their full conviction from the previous round may be trapped in their original framing. Fresh agents given the accumulated context (prior essays, structural analysis, sublation, validation critiques) plus the new contradiction can engage the evolved question without legacy commitment to positions that have already been sublated. This also brings fresh perspectives — different reasoning paths, different analogies, different ways of committing to the new positions.
 
 **Practical guidance:**
-- **Re-read the relevant phase before executing it in Round 2+.** By Round 2-3, your context window is large and the skill's instructions have drifted far above. Rather than re-reading the entire skill (which wastes context), each phase is wrapped in XML tags (`<phase1>`, `<phase2>`, `<phase3_4>`, `<phase5>`, `<phase6>`, `<phase7>`, `<phase8>`) for easy extraction. Before each round:
+- **Re-read the relevant phase before executing it in Round 2+.** By Round 2-3, your context window is large and the skill's instructions have drifted far above. Rather than re-reading the entire skill (which wastes context), each phase is wrapped in XML tags (`<phase1>`, `<phase2>`, `<phase3>`, `<phase4>`, `<phase5>`, `<phase6>`, `<phase7>`) for easy extraction. Before each round:
   1. Grep the overall structure: `grep -n "^<phase\|^</phase\|^<core\|^<overview" SKILL.md` to see the tag map
-  2. Before executing any phase, re-read that phase's tagged section: e.g., `sed -n '/<phase5>/,/<\/phase5>/p' SKILL.md`
-  3. At minimum re-read `<core_concepts>`, `<phase2>`, `<phase5>`, `<phase6>`, and `<phase7>` each round — these contain the instructions that drift hardest (anti-hedging, self-sublation, abduction test, auditor prompt, refinement process)
+  2. Before executing any phase, re-read that phase's tagged section: e.g., `sed -n '/<phase4>/,/<\/phase4>/p' SKILL.md`
+  3. At minimum re-read `<core_concepts>`, `<phase2>`, `<phase4>`, `<phase5>`, and `<phase6>` each round — these contain the instructions that drift hardest (anti-hedging, self-sublation, abduction test, auditor prompt, refinement process)
   
   Context drift is the most common failure mode in later rounds — the orchestrator starts cutting corners on exactly the steps that matter most.
 - **Pass all prior context** (both essays, structural analysis, sublation, validation critiques) to new agents as background
@@ -811,7 +810,7 @@ The system gets richer not by converging on a final answer but by accumulating r
 When stopping, present the user with the **final state of the dialectic queue** — which contradictions were explored, which remain open, and which were deferred. This is a map of the intellectual territory: the resolved contradictions form the new understanding, and the open contradictions are starting points for future sessions.
 
 See **Worked Examples → Example 3** for a 7-cycle dialectic showing how each round pulls in cross-domain material — Boyd's prediction in action.
-</phase8>
+</phase7>
 
 <model_selection>
 ## Model Selection & Cost Guidance
@@ -846,11 +845,11 @@ Based on three test runs across different domains (normative/institutional, busi
 | Phase 1 research (2-3 parallel agents) | 150-250K tokens | Do NOT cut here. This is the highest-value spend. Broader domains trend higher. |
 | Phase 1 supplementary research (user-triggered) | 0-50K tokens | Common — users frequently identify gaps. Budget for it. |
 | Phase 1d briefing synthesis | ~5K tokens | Orchestrator work |
-| Phase 3-4 monk essays (with briefing) | 25-45K tokens | Two monks, 2-3 targeted searches each |
-| Phase 5-6 analysis + synthesis | 15-30K tokens | Orchestrator inline work |
-| Phase 7 monk validation | 12-25K tokens | Two monks, strongest model |
-| Phase 7 hostile auditor | 5-15K tokens | One agent, strongest model. Reads essays + synthesis only. |
-| Phase 8 recursive round | 25-50K tokens | Often most valuable |
+| Phase 3 monk essays (with briefing) | 25-45K tokens | Two monks, 2-3 targeted searches each |
+| Phase 4-5 analysis + synthesis | 15-30K tokens | Orchestrator inline work |
+| Phase 6 monk validation | 12-25K tokens | Two monks, strongest model |
+| Phase 6 hostile auditor | 5-15K tokens | One agent, strongest model. Reads essays + synthesis only. |
+| Phase 7 recursive round | 25-50K tokens | Often most valuable |
 | Orchestrator overhead | 20-30K tokens | Interview, transitions, presentation |
 | **Total (one round + recursion)** | **~300-400K tokens** | Median ~300K without supplementary research |
 
@@ -861,7 +860,7 @@ Based on three test runs across different domains (normative/institutional, busi
 | Phase 1 extended interview | 15-30K tokens | 6-10 exchanges, deeper probing |
 | Phase 1 framework research (optional) | 0-50K tokens | Frameworks, not facts. May be skipped. |
 | Phase 1d context briefing | ~5K tokens | User-sourced material synthesized |
-| Phase 3-4 monk essays | 15-30K tokens | Monks may need zero additional searches |
+| Phase 3 monk essays | 15-30K tokens | Monks may need zero additional searches |
 | Remaining phases | Similar to above | |
 | **Total (one round + recursion)** | **~100-200K tokens** | Much cheaper — the user's testimony is the primary input |
 
@@ -878,7 +877,7 @@ This skill is written around `claude -p` (pipe mode) for spawning subagents. If 
 | Spawn subagent | `echo "[PROMPT]" \| claude -p > output.md` | `Task(prompt, subagent_type="general-purpose")` |
 | Parallel execution | Background shell jobs | `run_in_background=true` |
 | Output to file | Shell redirect (`> file.md`) | Agent returns text; orchestrator writes files |
-| Session resumption (Phase 7) | Resume same `claude -p` session | `resume` parameter with `agentId` — but persona may not persist without reinforcement. Include a summary of the agent's original argument as fallback. |
+| Session resumption (Phase 6) | Resume same `claude -p` session | `resume` parameter with `agentId` — but persona may not persist without reinforcement. Include a summary of the agent's original argument as fallback. |
 | Model selection | `--model` flag | `model` parameter (defaults to inheriting from parent) |
 | Tool access | `--allowedTools web_search,web_fetch` | Inherits from parent or configure per-task |
 
@@ -950,7 +949,7 @@ John Boyd's "Dialectic Engine": destructive deduction (shatter existing conceptu
 
 Boyd's cycle: **Structure → Unstructure → Restructure** → repeat at higher levels of elaboration.
 
-**Where Boyd is operationally present:** Phase 5.5 (Boydian Decomposition — the destructive step), Phase 6 (Sublation — the creative step requiring cross-domain connection), and Phase 8 (Recursion — each cycle is Boyd's full Structure → Unstructure → Restructure, which is why recursive rounds often need new research from outside the original domains).
+**Where Boyd is operationally present:** Phase 4.5 (Boydian Decomposition — the destructive step), Phase 5 (Sublation — the creative step requiring cross-domain connection), and Phase 7 (Recursion — each cycle is Boyd's full Structure → Unstructure → Restructure, which is why recursive rounds often need new research from outside the original domains).
 
 **Relationship to Hegel:** Hegel provides the engine for analyzing *how* positions fail (determinate negation) and the concept of what good synthesis looks like (Aufhebung). Boyd provides the engine for *what to do with the wreckage* — shatter, scatter, and recombine with outside material. The two frameworks are complementary: Hegel drives the contradiction analysis, Boyd drives the creative reconstruction.
 
@@ -1000,11 +999,11 @@ Brad DeLong's "Cognitive Distributed Disruption of Attention Crisis" (2026) fram
 
 ### Peirce: Abduction as the Logic of Discovery
 
-Charles Sanders Peirce identified three modes of inference: deduction (from rule to consequence), induction (from cases to rule), and **abduction** (from surprising fact to explanatory hypothesis). The synthesis phase is abductive: given the surprising fact that both monk positions exist and each has genuine evidence, what hypothesis would make this *unsurprising*? Peirce's typology of abduction (selective → conditional-creative → propositional-conditional-creative) maps to synthesis quality — the best syntheses introduce genuinely new concepts, not just new arrangements of known ones. Operationally present in Phase 6 (Abduction Test).
+Charles Sanders Peirce identified three modes of inference: deduction (from rule to consequence), induction (from cases to rule), and **abduction** (from surprising fact to explanatory hypothesis). The synthesis phase is abductive: given the surprising fact that both monk positions exist and each has genuine evidence, what hypothesis would make this *unsurprising*? Peirce's typology of abduction (selective → conditional-creative → propositional-conditional-creative) maps to synthesis quality — the best syntheses introduce genuinely new concepts, not just new arrangements of known ones. Operationally present in Phase 5 (Abduction Test).
 
 ### Pollock: Defeasible Reasoning and Defeat Types
 
-John Pollock's epistemology distinguishes **undercutting defeaters** (the inferential link is broken — reasons to doubt the connection between evidence and conclusion) from **rebutting defeaters** (evidence directly supporting the opposite conclusion). Undercutting is more structurally revealing because it identifies *how* reasoning fails, not just *that* it fails — parallel to determinate negation's "specific way of failing." Pollock also identifies self-defeating arguments (conclusions that undermine their own premises), which should be rejected outright. Operationally present in the hostile auditor prompt (Phase 7).
+John Pollock's epistemology distinguishes **undercutting defeaters** (the inferential link is broken — reasons to doubt the connection between evidence and conclusion) from **rebutting defeaters** (evidence directly supporting the opposite conclusion). Undercutting is more structurally revealing because it identifies *how* reasoning fails, not just *that* it fails — parallel to determinate negation's "specific way of failing." Pollock also identifies self-defeating arguments (conclusions that undermine their own premises), which should be rejected outright. Operationally present in the hostile auditor prompt (Phase 6).
 
 ### Galinsky: Perspective-Taking vs. Advocacy
 
@@ -1012,19 +1011,19 @@ Adam Galinsky's research shows that **perspective-taking** (cognitively inhabiti
 
 ### Klein: Prospective Hindsight (Premortem)
 
-Gary Klein's research shows that **imagining a future failure has already occurred** increases the ability to identify causes of that failure by ~30%, compared to asking "what could go wrong?" The temporal reframing ("it already happened, why?") breaks selective accessibility — the cognitive tendency to search only for confirming evidence. Operationally present in the hostile auditor prompt (Phase 7).
+Gary Klein's research shows that **imagining a future failure has already occurred** increases the ability to identify causes of that failure by ~30%, compared to asking "what could go wrong?" The temporal reframing ("it already happened, why?") breaks selective accessibility — the cognitive tendency to search only for confirming evidence. Operationally present in the hostile auditor prompt (Phase 6).
 
 ### Fauconnier & Turner: Conceptual Blending
 
-Gilles Fauconnier and Mark Turner's theory of conceptual blending provides the machinery for understanding how genuinely new concepts emerge. A blend's value is measured by its **emergent structure** — organizational properties that exist in neither input space. The skill's Boydian decomposition is the destructive step (creating input spaces), and sublation is the blend (which must have emergent structure to be genuine). The "generic space" — the abstract relational structure shared by both inputs — often reveals the shared assumption the synthesis must transcend. Operationally present in Phase 5.5.
+Gilles Fauconnier and Mark Turner's theory of conceptual blending provides the machinery for understanding how genuinely new concepts emerge. A blend's value is measured by its **emergent structure** — organizational properties that exist in neither input space. The skill's Boydian decomposition is the destructive step (creating input spaces), and sublation is the blend (which must have emergent structure to be genuine). The "generic space" — the abstract relational structure shared by both inputs — often reveals the shared assumption the synthesis must transcend. Operationally present in Phase 4.5.
 
 ### Ensemble Diversity: The Mathematical Basis
 
-Wood et al. (JMLR 2023) formalize why monk independence is load-bearing: the bias-variance-diversity decomposition shows diversity is literally subtracted from ensemble error (`E[loss] = noise + avg_bias + avg_variance − diversity`). Correlated errors eliminate the diversity benefit entirely. This is why monks must be spawned in separate sessions with no shared context, and why heterogeneous model families (when available) increase the skill's creative output. Surowiecki's wisdom-of-crowds conditions confirm: independence is necessary, not optional. Operationally present in the decorrelation check (Phase 3-4) and heterogeneous model guidance.
+Wood et al. (JMLR 2023) formalize why monk independence is load-bearing: the bias-variance-diversity decomposition shows diversity is literally subtracted from ensemble error (`E[loss] = noise + avg_bias + avg_variance − diversity`). Correlated errors eliminate the diversity benefit entirely. This is why monks must be spawned in separate sessions with no shared context, and why heterogeneous model families (when available) increase the skill's creative output. Surowiecki's wisdom-of-crowds conditions confirm: independence is necessary, not optional. Operationally present in the decorrelation check (Phase 3) and heterogeneous model guidance.
 
 ### Abelson & Sussman: Structure and Interpretation of Computer Programs
 
-SICP's core thesis — that managing complexity requires modularization, abstraction barriers, and composition of simple components — mirrors this skill's architecture. Each phase is a module with defined inputs and outputs. Agents are spawned in isolated environments (SICP's environment model) to prevent information leakage. The auditor deliberately can't see the orchestrator's Phase 5 analysis — an abstraction barrier, not an oversight.
+SICP's core thesis — that managing complexity requires modularization, abstraction barriers, and composition of simple components — mirrors this skill's architecture. Each phase is a module with defined inputs and outputs. Agents are spawned in isolated environments (SICP's environment model) to prevent information leakage. The auditor deliberately can't see the orchestrator's Phase 4 analysis — an abstraction barrier, not an oversight.
 
 Most relevant is SICP's **closure property:** a means of combination has closure when the result can itself be combined using the same means. The dialectic has closure — a synthesis is itself a valid position that can serve as input to the next round. This is *why recursion works:* the output type equals the input type. When closure breaks (a synthesis so abstract or meta that no monk could believe it at full conviction), recursion stalls. This is a diagnosable failure mode — if you can't hand the synthesis to a monk and have it argue from that position, the synthesis lacks closure and needs to be made more concrete.
 
@@ -1105,7 +1104,7 @@ The original question has nothing to do with jurisprudence or Gödel — but by 
 3. **Ontological questions force depth.** "What IS the proper relationship between X and Y?" pushes past feature comparison into structural argument.
 4. **"Push to the extreme" with permission.** Explicitly telling the monk to go somewhere uncomfortable counters RLHF agreeableness.
 5. **Opponent restatement prevents shadowboxing.** Monk B is warned: "Your opponent's argument is NOT the naive take. They will argue [ACTUAL ARGUMENT]."
-6. **Parallel structure enables comparison.** Both prompts follow the same shape (ontological claim → opponent's best case → diagnosis → deeper principle → push to extreme) so outputs are structurally comparable for Phase 5.
+6. **Parallel structure enables comparison.** Both prompts follow the same shape (ontological claim → opponent's best case → diagnosis → deeper principle → push to extreme) so outputs are structurally comparable for Phase 4.
 7. **Personal domains ground in specifics.** A monk that believes "career matters" is useless. A monk that believes "THIS user's specific professional identity is itself an act of parenting, because [interview evidence]" is doing its job.
 
 </worked_examples>
