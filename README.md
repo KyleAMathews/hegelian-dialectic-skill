@@ -5,16 +5,16 @@
 Thinking well about hard problems has at least three bottlenecks, and they compound:
 
 1. **Belief.** Once you hold a position, you can't simultaneously entertain its negation at full strength. You hedge, steelman weakly, unconsciously bias the comparison.
-2. **Research breadth.** Surveying the full landscape of ideas — the relevant thinkers, the historical parallels, the adjacent domains — takes enormous time. Most people stop far too early.
+2. **Research breadth.** Surveying a domain's thinkers, history, and adjacent fields takes enormous time. Most people stop too early.
 3. **Structural comparison.** Even when you have two positions side by side, *decomposing* them into atomic parts and finding cross-domain connections is cognitively brutal. Elizabeth Eisenstein argued that the printing press's greatest impact was enabling scholars to lay texts side by side and detect contradictions — but that comparison work is still extraordinarily demanding. It's where most analysis stalls.
 
 LLMs can do all three at a scale and speed humans can't. This skill orchestrates them to do exactly that.
 
-Two AI subagents — the Electric Monks — *believe* fully committed positions on your behalf, grounded in deep research across the relevant domain. A third (the orchestrator) decomposes both arguments into atomic parts, finds structural connections across domains, and produces a synthesis that transforms the question itself. The result is a **semi-lattice** — a web of cross-connected insights that no single linear argument could produce.
+Two AI subagents — the Electric Monks — *believe* fully committed positions on your behalf, grounded in deep research across the relevant domain. A third (the orchestrator) decomposes both arguments into atomic parts, finds structural connections across domains, and produces a synthesis that transforms the question itself. The result is a **semi-lattice** — a structure no single linear argument could produce.
 
-You operate from a belief-free position above the Monks, freed to analyze the *structure* of the contradiction rather than being inside either side. This isn't artificial intelligence — it's an **artificial belief system.** The agents believe and research *for* you, which frees you to think.
+You operate from a belief-free position above the Monks, freed to analyze the *structure* of the contradiction rather than being inside either side. This isn't artificial intelligence — it's an **artificial belief system** that frees you to think.
 
-**What the output feels like:** LLMs left to their own devices tend toward hot takes — shallow, average, predictable. The dialectic is an antidote. By forcing extreme positions, deconstructing them into atomic parts, and recombining across domains, the resulting analysis reads like a good human author: complex, rigorous, genuinely surprising. Each recursive round acts as a ratchet — the mental models get richer and more interesting with every cycle, because each synthesis becomes the input to the next round's contradiction. By Round 2–3, the dialectic is operating in territory that no single prompt could reach, producing insights that feel *earned* rather than generated.
+**What the output feels like:** Left alone, LLMs produce shallow takes. The dialectic breaks that pattern. Because the process forces extreme positions, deconstructs them into atomic parts, and recombines across domains, the output reads like a good human author: rigorous, surprising, and layered. Each round ratchets the mental models tighter, because each synthesis becomes the next round's thesis. By Round 2–3, the dialectic is operating in territory no single prompt could reach, producing insights that feel *earned* rather than generated.
 
 ## When to Use
 
@@ -24,15 +24,15 @@ You operate from a belief-free position above the Monks, freed to analyze the *s
 - **Build a deeper mental model** of a domain, not just pick an answer
 - **Explore a poorly understood problem** from multiple angles
 
-Works across any domain — technical architecture, product strategy, philosophy, personal decisions, risk analysis, policy, creative direction.
+Works across domains — technical architecture, product strategy, philosophy, personal decisions.
 
 ## How It Works
 
-The process has eight phases, each designed to exploit specific LLM capabilities.
+The process has eight phases.
 
 ### Phase 1: Elenctic Interview + Research
 
-The orchestrator interviews you using Socratic technique — surfacing hidden assumptions, finding the *deepest* version of the contradiction (not the surface framing), and identifying your specific belief burden. Then it conducts deep research to ground everything in real evidence.
+The orchestrator interviews you Socratically — surfacing hidden assumptions, finding the deepest version of the contradiction, and identifying your belief burden. Then it researches the domain to ground both sides in specifics.
 
 **Why LLMs are good at this:** LLMs can sustain a Socratic interview indefinitely without losing patience, track multiple threads of reasoning simultaneously, and synthesize broad research across domains in minutes. The interview surfaces what you're *actually* wrestling with; the research ensures the downstream arguments are grounded in specifics, not generics.
 
@@ -40,7 +40,7 @@ The orchestrator interviews you using Socratic technique — surfacing hidden as
 
 The orchestrator crafts two prompts — one per Monk — calibrated to your specific belief burden. Each prompt includes framing corrections that prevent the Monk from falling into the obvious, boring version of the argument, plus targeted research directives for position-specific evidence.
 
-**Why LLMs are good at this:** Prompt engineering is meta-cognition about cognition. The orchestrator uses its understanding of your situation to *shape* what the Monks will believe and how they'll argue — preempting shallow takes and steering toward the deepest version of each position.
+**Why LLMs are good at this:** The orchestrator uses its understanding of your situation to *shape* what the Monks will believe and how they'll argue — preempting shallow takes and steering toward the deepest version of each position.
 
 ### Phase 3–4: Spawn the Electric Monks
 
@@ -68,7 +68,7 @@ This is not compromise. It's not "use A for some cases and B for others." It's a
 
 Both Monks evaluate the synthesis: were they *elevated* (their core insight preserved within something larger) or *defeated* (their position just dismissed)? Then a hostile auditor — a fresh agent with no position — attacks the synthesis for hidden assumptions, compromise disguised as transcendence, and structural flaws.
 
-**Why LLMs are good at this:** The Monks can evaluate whether their "belief" was transformed or merely destroyed — a subtle judgment that requires holding both the original position and the synthesis in mind simultaneously. The hostile auditor exploits the LLM's ability to reason from fresh eyes without the orchestrator's confirmation bias.
+**Why LLMs are good at this:** The Monks can evaluate whether their belief was transformed or merely destroyed — which requires holding the original position and the synthesis in mind at once. The hostile auditor reasons from fresh eyes without the orchestrator's confirmation bias.
 
 ### Phase 8: Recursion
 
@@ -78,21 +78,21 @@ Each synthesis generates new contradictions. The orchestrator proposes 2–4 dir
 
 ## The Theory
 
-The skill addresses three cognitive bottlenecks, each grounded in a different theoretical framework. A fourth framework — Alexander's semi-lattice theory — explains why the *output* of the process is structurally richer than what any single line of reasoning can produce.
+The skill rests on three theoretical frameworks — one per bottleneck — plus Alexander's semi-lattice theory, which explains why the output is structurally richer than any single line of reasoning.
 
 ### Rao: The Belief Bottleneck
 
-From Venkatesh Rao's "Electric Monks" framework (after Douglas Adams). Belief inertia is a real bottleneck — once you hold a position, context-switching to its negation is expensive. You hedge, steelman weakly, unconsciously bias. The Monks eliminate this cost by carrying 100% of the belief load, freeing you to operate as a pure context-switching specialist.
+From Venkatesh Rao's "Electric Monks" framework (after Douglas Adams). Belief inertia — the cost of genuinely entertaining a position's negation — is the bottleneck Rao identified. The Monks eliminate it by carrying 100% of the belief load, freeing you to operate as a pure context-switching specialist.
 
 Boyd's F-86 analogy: in the Korean War, F-86 Sabres achieved a 10:1 kill ratio against MIG-15s despite similar flight capabilities. The difference was hydraulic controls — the pilot could reorient faster because the plane did the mechanical work, freeing attention for *choosing better maneuvers.* The Electric Monks are hydraulic controls for intellectual work.
 
-But Rao wrote this framework before LLMs. Belief inertia is real, but it's not the *only* bottleneck — and arguably not the most expensive one.
+Rao wrote this framework before LLMs. Belief inertia is real, but it's not the only bottleneck — and arguably not the most expensive one.
 
 ### Eisenstein + Boyd: The Research and Decomposition Bottlenecks
 
-Elizabeth Eisenstein argued that the printing press's most transformative effect wasn't making books cheap — it was **typographic fixity.** For the first time, scholars could lay texts side by side and detect contradictions between them. This sounds simple. It was revolutionary. Before print, you read one manuscript, traveled to another library, read another, and tried to hold the comparison in your head.
+Elizabeth Eisenstein argued that the printing press's most transformative effect wasn't making books cheap — it was **typographic fixity.** For the first time, scholars could lay texts side by side and detect contradictions. Before print, you read one manuscript, traveled to another library, read another, and tried to hold the comparison in your head.
 
-LLMs represent the next step in this progression: not just fixity and side-by-side comparison, but *automated structural comparison.* The research bottleneck (surveying the full landscape of a domain — the key thinkers, historical parallels, adjacent fields, empirical data) and the decomposition bottleneck (shattering arguments into atomic parts and finding cross-domain connections) are both cognitively brutal. Most people stop far too early on the first and never seriously attempt the second.
+LLMs represent the next step: not just fixity and side-by-side comparison, but *automated structural comparison.* Both remaining bottlenecks — research breadth and structural decomposition — are cognitively brutal. Most people abandon the first too early and never attempt the second.
 
 This is where Boyd's "Destruction and Creation" enters. His critical insight: you cannot synthesize something genuinely new by recombining within the same domain. You must first *shatter* existing concepts into atomic parts (destruction), then find cross-domain connections to build something new (creation). This decomposition work — stripping claims from their source positions, laying them out as an unstructured collection, searching for surprising connections — is exactly the kind of cognitively demanding structural comparison that Eisenstein identified as transformative when print first enabled it. LLMs can do it at a scale and speed that makes multi-round recursive dialectics practical in a single session.
 
