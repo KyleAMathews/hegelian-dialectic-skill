@@ -6,15 +6,15 @@ Thinking well about hard problems has at least three bottlenecks, and they compo
 
 1. **Belief.** Once you hold a position, you can't simultaneously entertain its negation at full strength. You hedge, steelman weakly, unconsciously bias the comparison.
 2. **Research breadth.** Surveying a domain's thinkers, history, and adjacent fields takes enormous time. Most people stop too early.
-3. **Structural comparison.** Even when you have two positions side by side, *decomposing* them into atomic parts and finding cross-domain connections is cognitively brutal. Elizabeth Eisenstein argued that the printing press's greatest impact was enabling scholars to lay texts side by side and detect contradictions — but that comparison work is still extraordinarily demanding. It's where most analysis stalls.
+3. **Structural comparison.** Even with two positions side by side, decomposing them into atomic parts and finding cross-domain connections is cognitively brutal. Most analysis stalls here.
 
 LLMs can do all three at a scale and speed humans can't. This skill orchestrates them to do exactly that.
 
-Two AI subagents — the Electric Monks — *believe* fully committed positions on your behalf, grounded in deep research across the relevant domain. A third (the orchestrator) decomposes both arguments into atomic parts, finds structural connections across domains, and produces a synthesis that transforms the question itself. The result is a **semi-lattice** — a structure no single linear argument could produce.
+Two AI subagents — the Electric Monks — *believe* fully committed positions on your behalf. A third, the orchestrator, decomposes both arguments into atomic parts, finds cross-domain connections, and synthesizes. The result is a **semi-lattice** — a structure no single linear argument could produce.
 
 You operate from a belief-free position above the Monks, freed to analyze the *structure* of the contradiction rather than being inside either side. This isn't artificial intelligence — it's an **artificial belief system** that frees you to think.
 
-**What the output feels like:** Left alone, LLMs produce shallow takes. The dialectic breaks that pattern. Because the process forces extreme positions, deconstructs them into atomic parts, and recombines across domains, the output reads like a good human author: rigorous, surprising, and layered. Each round ratchets the mental models tighter, because each synthesis becomes the next round's thesis. By Round 2–3, the dialectic is operating in territory no single prompt could reach, producing insights that feel *earned* rather than generated.
+**What the output feels like:** Left alone, LLMs produce shallow takes. The dialectic breaks that pattern. Because the process forces extreme positions and recombines across domains, the output reads like a good human author: rigorous, surprising, and layered. Each round ratchets the mental models tighter, because each synthesis becomes the next round's thesis. By Round 2–3, the dialectic is operating in territory no single prompt could reach, producing insights that feel *earned* rather than generated.
 
 ## When to Use
 
@@ -84,7 +84,7 @@ The skill rests on three theoretical frameworks — one per bottleneck — plus 
 
 From Venkatesh Rao's "Electric Monks" framework (after Douglas Adams). Belief inertia — the cost of genuinely entertaining a position's negation — is the bottleneck Rao identified. The Monks eliminate it by carrying 100% of the belief load, freeing you to operate as a pure context-switching specialist.
 
-Boyd's F-86 analogy: in the Korean War, F-86 Sabres achieved a 10:1 kill ratio against MIG-15s despite similar flight capabilities. The difference was hydraulic controls — the pilot could reorient faster because the plane did the mechanical work, freeing attention for *choosing better maneuvers.* The Electric Monks are hydraulic controls for intellectual work.
+Boyd's analogy: F-86 pilots beat MIG-15s not through better aircraft but through hydraulic controls that let them reorient faster — freeing attention for *choosing better maneuvers.* The Monks are hydraulic controls for intellectual work.
 
 Rao wrote this framework before LLMs. Belief inertia is real, but it's not the only bottleneck — and arguably not the most expensive one.
 
@@ -94,11 +94,11 @@ Elizabeth Eisenstein argued that the printing press's most transformative effect
 
 LLMs represent the next step: not just fixity and side-by-side comparison, but *automated structural comparison.* Both remaining bottlenecks — research breadth and structural decomposition — are cognitively brutal. Most people abandon the first too early and never attempt the second.
 
-This is where Boyd's "Destruction and Creation" enters. His critical insight: you cannot synthesize something genuinely new by recombining within the same domain. You must first *shatter* existing concepts into atomic parts (destruction), then find cross-domain connections to build something new (creation). This decomposition work — stripping claims from their source positions, laying them out as an unstructured collection, searching for surprising connections — is exactly the kind of cognitively demanding structural comparison that Eisenstein identified as transformative when print first enabled it. LLMs can do it at a scale and speed that makes multi-round recursive dialectics practical in a single session.
+This is where Boyd's "Destruction and Creation" enters. His critical insight: you cannot synthesize something genuinely new by recombining within the same domain. You must first *shatter* existing concepts into atomic parts (destruction), then find cross-domain connections to build something new (creation). This decomposition work — stripping claims from their source, searching for surprising connections — is the structural comparison Eisenstein identified as transformative when print first enabled it. LLMs can do it at a scale and speed that makes multi-round recursive dialectics practical in a single session.
 
 ### Hegel: Determinate Negation and Aufhebung
 
-The engine that drives the contradiction analysis is *determinate negation* — not "this is wrong" but "this is wrong in a *specific way* that points toward what's missing." The specific failure mode is a signpost. Sublation (Aufhebung) simultaneously cancels, preserves, and elevates — it produces a reframing so complete that the original terms of the debate stop making sense. Kant didn't resolve the rationalism/empiricism debate by splitting the difference. He showed that experience provides content while reason provides structure — and once you see that, the original question ("does knowledge come from reason or experience?") dissolves. It's not that you pick a side. It's that you can't even think in the old terms anymore. That irreversibility is what distinguishes genuine synthesis from compromise.
+*Determinate negation* doesn't say "this is wrong." It says "this is wrong in a *specific way* that points toward what's missing." The failure mode is a signpost. Sublation (Aufhebung) simultaneously cancels, preserves, and elevates — it produces a reframing so complete that the original terms of the debate stop making sense. Kant didn't resolve the rationalism/empiricism debate by splitting the difference. He showed that experience provides content while reason provides structure — and once you see that, the original question ("does knowledge come from reason or experience?") dissolves. It's not that you pick a side. It's that you can't even think in the old terms anymore. That irreversibility is what distinguishes genuine synthesis from compromise.
 
 ### Alexander: Semi-Lattice Generation
 
@@ -119,11 +119,11 @@ This is subtle but important: **the skill is a semi-lattice compiler.** The answ
 
 ## Usage
 
-The skill works with any coding agent that supports subagent spawning and web search — Claude Code, Cursor, Windsurf, etc. The SKILL.md is written in terms of `claude -p` for subagents but includes an environment mapping table for adapting to other agent architectures.
+The skill works with any coding agent that supports subagent spawning and web search — Claude Code, Cursor, Windsurf, etc. SKILL.md uses `claude -p` for subagent commands but includes a mapping table for other agent architectures.
 
 ### Setup
 
-Create a directory to collect your dialectics. Each dialectic gets its own subdirectory — the skill generates several files (context briefing, monk essays, structural analysis, synthesis, dialectic queue) and having them in one place makes the trace navigable.
+Create a directory to collect your dialectics. Each dialectic gets its own subdirectory — the skill generates several files (context briefing, monk essays, structural analysis, synthesis, dialectic queue).
 
 ```
 dialectics/
