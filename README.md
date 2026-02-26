@@ -33,7 +33,7 @@ Works across domains — technical architecture, product strategy, philosophy, p
 
 The skill works with any coding agent that supports subagent spawning and web search — Claude Code, Cursor, Windsurf, etc.
 
-**This is a heavy process by design.** Expect 10–15 minutes per round minimum, and plan for at least 3 rounds. Use the strongest models available — the quality difference between Opus-class and Sonnet-class models is substantial, not marginal. Every phase benefits from maximum reasoning capability.
+**This is a heavy process by design.** Expect 10–15 minutes per round minimum, and plan for at least 3 rounds. This skill needs the best available model — every phase benefits from maximum reasoning capability.
 
 ### Setup
 
