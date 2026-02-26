@@ -31,7 +31,7 @@ Works across domains — technical architecture, product strategy, philosophy, p
 
 ## Usage
 
-The skill works with any coding agent that supports subagent spawning and web search — Claude Code, Cursor, Windsurf, etc. SKILL.md uses `claude -p` for subagent commands but includes a mapping table for other agent architectures.
+The skill works with any coding agent that supports subagent spawning and web search — Claude Code, Cursor, Windsurf, etc.
 
 **This is a heavy process by design.** Expect 10–15 minutes per round minimum, and plan for 2–3 rounds. Use the strongest models available — the quality difference between Opus-class and Sonnet-class models is substantial, not marginal. Every phase benefits from maximum reasoning capability.
 
