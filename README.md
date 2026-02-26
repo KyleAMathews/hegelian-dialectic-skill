@@ -4,7 +4,7 @@
 
 **An agent skill that helps you think better by automating the brutally expensive parts of deep reasoning.**
 
-Two AI subagents — the Electric Monks — *believe* fully committed positions on your behalf. A third, the orchestrator, decomposes both arguments into atomic parts, finds cross-domain connections, and synthesizes. The result is a **semi-lattice** — a structure no single linear argument could produce. Like F-86 pilots who beat MIG-15s not through better aircraft but through hydraulic controls that freed their attention for *choosing better maneuvers* — the Monks handle the belief work so you can focus on the structural analysis.
+Two AI subagents — the Electric Monks — *believe* fully committed positions on your behalf. A third, the orchestrator, decomposes both arguments into atomic parts, finds cross-domain connections, and synthesizes. The result is a **semi-lattice** — a structure no single linear argument could produce.
 
 You operate from a belief-free position above the Monks, analyzing the *structure* of the contradiction rather than being inside either side. This isn't artificial intelligence — it's an **artificial belief system** that frees you to think.
 
@@ -126,6 +126,8 @@ The skill rests on three theoretical frameworks — one per bottleneck — plus 
 ### Rao: The Belief Bottleneck
 
 From Venkatesh Rao's "Electric Monks" framework (after Douglas Adams). Belief inertia — the cost of genuinely entertaining a position's negation — is the bottleneck Rao identified. The Monks eliminate it by carrying 100% of the belief load, freeing you to operate as a pure context-switching specialist.
+
+Boyd's analogy: in the Korean War, F-86 Sabres achieved a 10:1 kill ratio against MIG-15s despite similar flight capabilities. The difference was hydraulic controls — the pilot could reorient faster because the plane did the mechanical work, freeing attention for *choosing better maneuvers.* The Monks are hydraulic controls for intellectual work.
 
 Rao wrote this framework before LLMs. Belief inertia is real, but it's not the only bottleneck — and arguably not the most expensive one.
 
