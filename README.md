@@ -20,11 +20,12 @@ LLMs can do all three at a scale and speed humans can't. This skill orchestrates
 
 ## When to Use
 
-- **Stress-test an idea** against the strongest possible counter-argument
-- **Resolve a genuine tension** where you're torn between positions
-- **Make a high-stakes decision** where the tradeoffs are unclear
-- **Build a deeper mental model** of a domain, not just pick an answer
-- **Explore a poorly understood problem** from multiple angles
+- **You've locked onto a vision and can't genuinely entertain alternatives.** You have a strong thesis — maybe an architecture, a strategy, a life direction — and you want to stress-test it, but you keep steelmanning the other side weakly.
+- **You're trying to do everything because cutting anything feels like betrayal.** Competing needs all feel equally urgent. You can't triage because every priority has someone counting on it.
+- **You can argue every side but can't commit to any of them.** You find the question intellectually interesting but "what do *you* actually think?" produces discomfort. You've explored this before without resolution.
+- **You've optimized a system and suspect you might be optimizing the wrong thing.** Your approach works — you have data to prove it — but the landscape may have shifted and you can't see past your own competence.
+- **Your own values contradict each other.** You believe multiple things passionately, each feels individually right, but collectively they're impossible. The tension is internal, not external.
+- **"This is how it's done" has become invisible as an assumption.** You have deep knowledge of how things work, but you suspect it's blinding you to radically different approaches.
 
 Works across domains — technical architecture, product strategy, philosophy, personal decisions.
 
