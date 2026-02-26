@@ -1,6 +1,6 @@
 # The Electric Monks — Dialectic Skill
 
-**A Claude Code skill that helps you think better by automating the brutally expensive parts of deep reasoning.**
+**An agent skill that helps you think better by automating the brutally expensive parts of deep reasoning.**
 
 Thinking well about hard problems has at least three bottlenecks, and they compound:
 
