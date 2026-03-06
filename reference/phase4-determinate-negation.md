@@ -41,40 +41,25 @@ It IS:
 ## 4.4 The Hidden Question
 Articulate the deeper question the contradiction is ACTUALLY about — the question neither agent asked because they were both too committed to their answers. This should reframe the entire debate in a way that makes both positions legible as partial truths.
 
-## 4.5 Boydian Decomposition (Destruction Phase)
-
-**Before attempting synthesis, shatter both positions into their atomic parts.** This step comes from Boyd's "Destruction and Creation" — you cannot synthesize something genuinely new by recombining within the same conceptual domains. You must first destroy the existing wholes, scatter the parts, and look for cross-domain connections that were invisible when the parts were trapped inside their original positions.
-
-Concretely:
-1. **Identify the generic space** — the abstract relational structure both positions share. Both assume a particular unit of analysis, a particular causal model, a particular temporal frame. This shared structure is the skeleton they're both building on, and often the thing the synthesis needs to transcend.
-2. **List the atomic components** of both positions — individual claims, mechanisms, evidence, assumptions, metaphors, principles — stripped of which agent said them. Don't organize by position. Create an unstructured collection.
-3. **Look for surprising connections** between parts that came from different positions. What mechanisms from A illuminate evidence from B? What assumptions from B reframe principles from A?
-4. **Ask: what material from adjacent domains** might connect to these liberated parts? What analogies, frameworks, or mechanisms from *outside* the original debate space could bind these parts into something neither agent could have conceived? This is where genuinely new concepts come from.
-5. **Epistemological diversity check:** If one monk claims that something *resists* analytical/propositional treatment (love, wisdom, quality of attention, aesthetic judgment, faith, embodied knowledge), specifically search for domains where that claim is taken seriously *on its own terms* — virtue ethics, contemplative traditions, care ethics, aesthetic philosophy, phenomenology. If all your cross-domain material is itself analytical, it will reinforce the orchestrator's natural bias toward operationalization and the synthesis will dissolve the higher-order claim into lower-order terms. The adjacent domains must include at least one where the highest-level claim in the dialectic is the *starting point*, not the thing to be explained away.
-
-**Emergent structure test:** The synthesis must have organizational properties that exist in *neither* input — properties that can't be traced back to either monk's position. If every element of your synthesis is attributable to one monk or the other, you've recombined, not created. Genuine sublation produces emergent structure.
-
-The first two steps reorganize existing material. The third is where creativity enters — and it's why the orchestrator's Phase 1 research breadth matters. The wider your research covered adjacent domains, the more cross-domain connections become visible here.
-
-**Example from test run (React/Vue dialectic):** Shattering both positions revealed that "legacy burden" (from the corporate lab essay) and "self-referential complexity" (from the auteur essay) were describing the *same phenomenon* from different angles. Liberated from their positions, they connected to form a new concept: "innovation character is predicted by legacy burden, not funding source." This wasn't available from within either position.
-
-## 4.6 Lateral Creativity Interventions (Round 2+ Only)
+## 4.5 Lateral Creativity Interventions (Round 2+ Only)
 
 **Skip this section in Round 1.** Round 1 is calibration — the conceptual space isn't well-mapped yet and lateral injection is noise. In Round 2+, where the synthesis is being pushed past its own limits, is where the vocabulary runs out and these interventions have the highest marginal value.
 
 The dialectic processes everything through propositional structural analysis. That channel is powerful but it can only recombine existing conceptual vocabulary — it cannot generate *new* vocabulary. The following interventions force the mind to process the problem through channels it wasn't using.
 
-### 4.6a Compressed Conflict Generation
+**These interventions come BEFORE the Boydian decomposition** so that the new material they produce becomes atomic parts in the decomposition. Running decomposition first means you shatter and recombine within the same conceptual space, then bolt on random domains as an afterthought. Running lateral interventions first means the random domains get decomposed and cross-connected alongside the monks' material — producing genuinely new combinations.
 
-Express each core tension from the decomposition as a **two-word oxymoron** — a "compressed conflict" (from Gordon's Synectics). Examples: "productive dissipation," "autonomous dependence," "structured spontaneity," "durable ephemerality."
+### 4.5a Compressed Conflict Generation
+
+Express each core tension from the determinate negation (4.3) as a **two-word oxymoron** — a "compressed conflict" (from Gordon's Synectics). Examples: "productive dissipation," "autonomous dependence," "structured spontaneity," "durable ephemerality."
 
 Generate 5-7 compressed conflicts. Select the 2-3 most resonant ones to guide synthesis direction.
 
 **Why this works:** The oxymoron format holds the contradiction as a *unit* rather than resolving it. It encodes the tension in a form that resists premature resolution — exactly what you want before synthesis. In testing, compressed conflicts pointed toward synthesis mechanisms faster and more precisely than the full Boydian decomposition alone.
 
-### 4.6b Random Domain Injection
+### 4.5b Random Domain Injection
 
-Inject a domain completely unrelated to the dialectic and **force yourself to find structural isomorphisms** between the atomic claims from 4.5 and that domain.
+Inject a domain completely unrelated to the dialectic and **force yourself to find structural isomorphisms** between the core tensions from 4.3-4.4 and that domain.
 
 **Use Wikipedia for genuine randomness.** The orchestrator picking a "random" domain actually filters through the orchestrator's own conceptual habits — you'll gravitate toward domains you already know. Wikipedia's randomness is genuinely external. Fetch 15-20 random articles via the API:
 
@@ -84,19 +69,38 @@ curl -s "https://en.wikipedia.org/w/api.php?action=query&list=random&rnnamespace
 
 Scan the titles and fetch short extracts for the ones that are *maximally distant from the current dialectic's domain* and have enough conceptual density to work with (not stubs). The goal is domain distance — if the dialectic is about software architecture, a biography of a 19th-century nurse or a sports scoring system might be perfect. If the dialectic is about career decisions, condensed matter physics or liturgical history might work. Use your judgment about what's far enough away to force genuine surprise. Typically 5-8 out of 50 will have enough substance — pick the 2-3 richest to force isomorphisms on.
 
-For each promising article, spend 2-3 paragraphs forcing connections to the atomic claims. Most will be noise — that's fine. You're looking for the one connection that illuminates something the within-domain recombination missed.
+For each promising article, spend 2-3 paragraphs forcing connections to the core tensions. Most will be noise — that's fine. You're looking for the one connection that illuminates something the within-domain recombination missed.
 
 **In testing (Round 21 of a long-running dialectic):** 5 out of 30 random Wikipedia articles produced useful isomorphisms. Spin density waves yielded a "commensurability test" (structural criterion for a question the synthesis had left vague). The Ely Hospital inquiry revealed that infrastructure can actively *suppress* what it can't express, not just passively miss it. A carnivorous plant's bladder trap mechanism reframed concept-generation from "construction" to "trigger-firing," resolving a core paradox. Geological stratigraphy suggested that infrastructure should carry its formation history as metadata. The hit rate is low but the hits are high-leverage — exactly the kind of material that within-domain analysis cannot produce.
 
 **Why this works:** This is Boyd's cross-domain step made mandatory instead of optional. The Boydian decomposition says "look for cross-domain connections" but doesn't force them, so the orchestrator defaults to within-domain recombination. Domain distance correlates with novelty of output (Synectics research). The constraint is what creates the exploration.
 
-### 4.6c Non-Propositional Pause
+### 4.5c Non-Propositional Pause
 
-Before proceeding to synthesis, pause the analytical engine. Write **three metaphors** for the contradiction you just analyzed. Not explanatory metaphors — evocative ones. What does this tension *feel like*? What does it *look like*? What does it *sound like*?
+Before proceeding to decomposition, pause the analytical engine. Write **three metaphors** for the contradiction you just analyzed. Not explanatory metaphors — evocative ones. What does this tension *feel like*? What does it *look like*? What does it *sound like*?
 
 Keep this to 2 paragraphs maximum. The point is to engage structural intuition through a non-propositional channel, not to produce literary output. Extract 3-5 structural observations from the metaphors before proceeding.
 
 **Why this works:** The gap between reading the monks and doing determinate negation is where the orchestrator's propositional habits kick in hardest. A non-propositional pause surfaces structural features that analytical reasoning skips — embodied, temporal, spatial, and emotional dimensions of the contradiction that propositional analysis flattens.
+
+## 4.6 Boydian Decomposition (Destruction Phase)
+
+**Now shatter both positions — AND the lateral material from 4.5 — into their atomic parts.** This step comes from Boyd's "Destruction and Creation" — you cannot synthesize something genuinely new by recombining within the same conceptual domains. You must first destroy the existing wholes, scatter the parts, and look for cross-domain connections that were invisible when the parts were trapped inside their original positions.
+
+The lateral interventions from 4.5 are critical here: the compressed conflicts, random domain isomorphisms, and metaphor observations should all be broken into atomic parts alongside the monks' material. This is why 4.5 comes before 4.6 — the lateral material needs to be *decomposed and recombined*, not bolted on after the fact.
+
+Concretely:
+1. **Identify the generic space** — the abstract relational structure both positions share. Both assume a particular unit of analysis, a particular causal model, a particular temporal frame. This shared structure is the skeleton they're both building on, and often the thing the synthesis needs to transcend. Note how the lateral material from 4.5 may reveal aspects of the generic space that within-domain analysis missed.
+2. **List the atomic components** of both positions AND the lateral material — individual claims, mechanisms, evidence, assumptions, metaphors, principles — stripped of which agent or domain said them. Don't organize by position or source. Create an unstructured collection.
+3. **Look for surprising connections** between parts that came from different positions AND different domains. What mechanisms from A illuminate evidence from B? What random domain isomorphisms from 4.5b connect to principles from either monk? The highest-value connections are typically between lateral material and monk material — these are the cross-domain links that within-domain analysis cannot produce.
+4. **Ask: what material from adjacent domains** might connect to these liberated parts? What analogies, frameworks, or mechanisms from *outside* the original debate space could bind these parts into something neither agent could have conceived? This is where genuinely new concepts come from.
+5. **Epistemological diversity check:** If one monk claims that something *resists* analytical/propositional treatment (love, wisdom, quality of attention, aesthetic judgment, faith, embodied knowledge), specifically search for domains where that claim is taken seriously *on its own terms* — virtue ethics, contemplative traditions, care ethics, aesthetic philosophy, phenomenology. If all your cross-domain material is itself analytical, it will reinforce the orchestrator's natural bias toward operationalization and the synthesis will dissolve the higher-order claim into lower-order terms. The adjacent domains must include at least one where the highest-level claim in the dialectic is the *starting point*, not the thing to be explained away.
+
+**Emergent structure test:** The synthesis must have organizational properties that exist in *neither* input — properties that can't be traced back to either monk's position. If every element of your synthesis is attributable to one monk or the other, you've recombined, not created. Genuine sublation produces emergent structure.
+
+The first two steps reorganize existing material. The third is where creativity enters — and it's why the orchestrator's Phase 1 research breadth matters. The wider your research covered adjacent domains, the more cross-domain connections become visible here.
+
+**Example from test run (React/Vue dialectic):** Shattering both positions revealed that "legacy burden" (from the corporate lab essay) and "self-referential complexity" (from the auteur essay) were describing the *same phenomenon* from different angles. Liberated from their positions, they connected to form a new concept: "innovation character is predicted by legacy burden, not funding source." This wasn't available from within either position.
 
 ## 4.7 Sublation Criteria
 Before attempting synthesis, specify what it must accomplish:
